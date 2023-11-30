@@ -34,7 +34,7 @@ Aquí se muestran todos los turnos disponibles en la página. Inicialmente, esta
 
 # Filtrar turnos por fecha
 
-![Screenshot 2023-11-30 at 5 38 46 AM](https://github.com/dmillanlpez/deMillanDiego_pruebatec2/assets/97486464/80432029-e19d-4a4b-b453-9984ae8b1229)
+![Screenshot 2023-11-30 at 11 37 00 PM](https://github.com/dmillanlpez/deMillanDiego_pruebatec2/assets/97486464/f877a2ae-216e-4eb4-a8cd-6fe5bdea1a94)
 
 Esta sección de la aplicación está diseñada para la filtración de turnos por una fecha específica. Mediante un formulario intuitivo, los usuarios tienen la capacidad de seleccionar una fecha y visualizar todos los turnos asignados a los distintos días. Además, se facilita la posibilidad de actualizar el estado de los turnos, por ejemplo, cambiando un turno del estado "En espera" a "Atendido" y viceversa. 
 
