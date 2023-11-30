@@ -91,8 +91,9 @@ public class FiltradoFechaTurno extends HttpServlet {
         } else {
             // Manejar el caso de no proporcionar fecha
             request.setAttribute("error", "Debes proporcionar una fecha para poder filtrar los turnos.");
-            request.getRequestDispatcher("rutaAlJSPErrorOInicio.jsp").forward(request, response);
         }
+            request.getRequestDispatcher("filtradoFechaTurno.jsp").forward(request, response);
+
     }
 
     /**
