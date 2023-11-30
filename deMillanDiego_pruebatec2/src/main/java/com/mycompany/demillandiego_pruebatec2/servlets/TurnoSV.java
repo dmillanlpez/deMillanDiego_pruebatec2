@@ -47,7 +47,11 @@ public class TurnoSV extends HttpServlet {
         }
     }
 
-   
+   /**
+     * Maneja la solicitud GET para filtrar los turnos por fecha.
+     * Si se proporciona una fecha valida, se van recuperan los turnos correspondientes a esa fecha.
+     * En caso de no recibir una fecha válida, se redirige a una pagina de error o inicio.
+     */
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
@@ -69,7 +73,11 @@ public class TurnoSV extends HttpServlet {
     request.getRequestDispatcher("filtrarTurno.jsp").forward(request, response);
 }
 
-   
+   /**
+     * Maneja la solicitud POST para crear o modificar turnos.
+     * Si no se proporciona un ID de turno, se crea un nuevo turno con todos los datos proporcionados.
+     * Si se proporciona un ID de turno, se busca y se va a actualizar el turno correspondiente.
+     */
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
@@ -103,7 +111,6 @@ public class TurnoSV extends HttpServlet {
     
     }
 
-    
     @Override
     public String getServletInfo() {
         return "Short description";

@@ -61,6 +61,13 @@ public class FiltradoFechaTurno extends HttpServlet {
      * @throws ServletException if a servlet-specific error occurs
      * @throws IOException if an I/O error occurs
      */
+    
+     /*
+     * Maneja la solicitud GET para filtrar los turnos por fecha y, opcionalmente, por estado.
+     * Si se proporcionan ambos, fecha y estado, se va a devilver una lista de turnos que coincidan con ambos criterios.
+     * Si solo se proporciona la fecha, se devuelven todos los turnos para esa fecha.
+     * Si no se proporciona fecha, se redirige al usuario a una página de error o inicio.
+     */
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
@@ -83,8 +90,7 @@ public class FiltradoFechaTurno extends HttpServlet {
             request.getRequestDispatcher("filtradoFechaTurno.jsp").forward(request, response);
         } else {
             // Manejar el caso de no proporcionar fecha
-            // Puedes establecer un mensaje de error o simplemente redirigir a otra página
-            request.setAttribute("error", "Debe proporcionar una fecha para filtrar los turnos.");
+            request.setAttribute("error", "Debes proporcionar una fecha para poder filtrar los turnos.");
             request.getRequestDispatcher("rutaAlJSPErrorOInicio.jsp").forward(request, response);
         }
     }
@@ -96,6 +102,10 @@ public class FiltradoFechaTurno extends HttpServlet {
      * @param response servlet response
      * @throws ServletException if a servlet-specific error occurs
      * @throws IOException if an I/O error occurs
+     */
+    
+    /**
+     * En este caso el doPost no hace nada, esta clase solo existe para el doGet
      */
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)

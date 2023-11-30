@@ -1,6 +1,5 @@
 <%-- 
     Document   : agregarTurno
-    Created on : Nov 29, 2023, 10:30:01 PM
     Author     : diego
 --%>
 <%@ include file="header.jsp" %>
@@ -15,7 +14,7 @@
 <body>
     <main class="main-container">
         <section class="form-section">
-            <h2 class="form-title">Agregar Turno</h2>
+            <h2 class="titulo" >Agregar Turno</h2>
             <form action="TurnoSV" method="post" class="form">
                 <div class="form-group">
                     <label for="id-ciudadano">ID Ciudadano:</label>

@@ -60,6 +60,11 @@ public class ListarTurnos extends HttpServlet {
      * @throws ServletException if a servlet-specific error occurs
      * @throws IOException if an I/O error occurs
      */
+    
+    /**
+     * Maneja la solicitud GET para listar todos los turnos.
+     * Recupera todos los turnos de la base de datos y los envia a la pagina JSP para que pueda ser visto por el user.
+     */
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
@@ -78,6 +83,10 @@ public class ListarTurnos extends HttpServlet {
      * @param response servlet response
      * @throws ServletException if a servlet-specific error occurs
      * @throws IOException if an I/O error occurs
+     */
+    
+    /**
+     * En este caso el doPost no hace nada, esta clase solo existe para el doGet
      */
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)

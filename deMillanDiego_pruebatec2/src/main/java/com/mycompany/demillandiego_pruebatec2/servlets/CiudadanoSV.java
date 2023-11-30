@@ -24,6 +24,7 @@ import javax.servlet.http.HttpServletResponse;
 @WebServlet(name = "CiudadanoSV", urlPatterns = {"/CiudadanoSV"})
 public class CiudadanoSV extends HttpServlet {
     
+    // Lista para almacenar objetos de tipo Ciudadano.
     private List<Ciudadano> listaCiudadano = new ArrayList<>();
     private Controladora control = new Controladora();
 
@@ -45,6 +46,11 @@ public class CiudadanoSV extends HttpServlet {
         }
     }
 
+    /*
+     * Maneja la solicitud GET para buscar un ciudadano por ID.
+     * Si se encuentra el ID, se establece el ciudadano correspondiente como atributo del request.
+     * En caso de error en el formato del ID, se establece un mensaje de error.
+     */
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
@@ -66,7 +72,11 @@ public class CiudadanoSV extends HttpServlet {
         dispatcher.forward(request, response);
       
  }
-
+    
+    /*
+     * Maneja la solicitud POST para agregar un nuevo ciudadano.
+     * Valida los campos del formulario y, si son correctos, crea y almacena un nuevo objeto Ciudadano.
+     */
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
@@ -76,8 +86,7 @@ public class CiudadanoSV extends HttpServlet {
         String dni = request.getParameter("dni");
         String telefono = request.getParameter("telefono");
         
-        // Valido los datos en caso de que esten vacios
-        
+        // Valido los datos en caso de que esten vacios y si todo es correcto se crea un objeto (explicacion linea 78)
         if(!nombre.isEmpty() && !apellidos.isEmpty() && !dni.isEmpty() && telefono.matches("^[0-9]{9}$")){
             
             Ciudadano ciudadano = new Ciudadano();
@@ -92,7 +101,6 @@ public class CiudadanoSV extends HttpServlet {
         
 }
 
- 
     @Override
     public String getServletInfo() {
         return "Short description";
