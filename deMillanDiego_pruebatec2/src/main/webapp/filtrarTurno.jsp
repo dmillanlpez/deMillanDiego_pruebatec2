@@ -23,7 +23,7 @@
             </form>
          </section>
          <section class="table-section">
-            <h2 class="titulo">Resultados de Turnos</h2>
+            <h2 class="titulo">Resultados del filtrado de Turnos</h2>
             <table class="table">
                <thead>
                   <tr>
