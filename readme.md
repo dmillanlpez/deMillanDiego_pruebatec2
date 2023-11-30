@@ -66,18 +66,24 @@ Incorporar un sistema de retroalimentación donde los ciudadanos puedan valorar 
 - Streams
 - Funciones lambda
 
-Funcionamiento Interno: Servlets
+# Funcionamiento Interno: Servlets
+
 La aplicación utiliza varios servlets para manejar diferentes funcionalidades relacionadas con los turnos y los ciudadanos. A continuación, se describe la responsabilidad de cada uno de ellos:
 
-Servlets de Turnos
-TurnoSV
-Filtrar Turnos por Fecha: Encargado de filtrar y mostrar los turnos basados en la fecha proporcionada.
-Agregar Turno: Gestiona la creación de nuevos turnos en el sistema.
-FiltradoFechaTurnoSV
-Filtrar por Fecha y Estado: Este servlet se encarga de filtrar los turnos según la fecha y, opcionalmente, el estado. Si no se selecciona un estado específico, muestra todos los turnos para la fecha indicada.
-Servlets de Ciudadanos
-CiudadanoSV
-Agregar Ciudadano: Gestiona la adición de nuevos ciudadanos al sistema.
-Buscar Ciudadano: Permite buscar ciudadanos por su ID y mostrar los detalles asociados.
-ListarTurnosSV
-Listar Todos los Turnos: Este servlet es responsable de mostrar todos los turnos disponibles en el sistema, ofreciendo una vista completa de las citas y actividades programadas.
+## Servlets de Turnos
+
+### TurnoSV
+- **Filtrar Turnos por Fecha**: Encargado de filtrar y mostrar los turnos basados en la fecha proporcionada.
+- **Agregar Turno**: Gestiona la creación de nuevos turnos en el sistema.
+
+### FiltradoFechaTurnoSV
+- **Filtrar por Fecha y Estado**: Este servlet se encarga de filtrar los turnos según la fecha y, opcionalmente, el estado. Si no se selecciona un estado específico, muestra todos los turnos para la fecha indicada.
+
+## Servlets de Ciudadanos
+
+### CiudadanoSV
+- **Agregar Ciudadano**: Gestiona la adición de nuevos ciudadanos al sistema.
+- **Buscar Ciudadano**: Permite buscar ciudadanos por su ID y mostrar los detalles asociados.
+
+### ListarTurnosSV
+- **Listar Todos los Turnos**: Este servlet es responsable de mostrar todos los turnos disponibles en el sistema, ofreciendo una vista completa de las citas y actividades programadas.
