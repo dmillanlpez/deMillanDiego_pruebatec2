@@ -65,3 +65,12 @@ Incorporar un sistema de retroalimentación donde los ciudadanos puedan valorar 
 - Objetos
 - Streams
 - Funciones lambda
+
+# Funcionamiento interno
+Servlets
+
+-TurnoSV --> Es el encargado de filtrar los turnos por la fecha.
+-TurnoSV --> Es el encargado de agregar un turno.
+-FiltradoFechaTurnoSV --> Encargado de filtrar por fecha y por estado (en caso de que no se seleccione un estado y sea todos, se nos van a mostrar todos).
+-CiudadanoSV --> Encargado de agregar a un usuario y de buscar un ciudadano.
+-ListarTurnosSV --> Encargado de mostrarnos todos los turnos que hay actualmente en el sistema.
