@@ -40,14 +40,6 @@ public class ControladoraPersistencia {
        return ciudadanoJpa.findCiudadanoEntities();
     }
     
-    // Filtrado por DNI utilizando streams
-    public Optional<Long> busquedaPorDni(String dni) {
-    return ciudadanoJpa.findCiudadanoEntities().stream()
-                .filter(n -> n.getDni().equalsIgnoreCase(dni))
-                .findFirst()
-                .map(Ciudadano::getId);
-    }
-    
     // Eliminacion de un Ciudadano
     public void eliminarCiudadano(Long id) {
     try {
@@ -109,12 +101,5 @@ public class ControladoraPersistencia {
             Logger.getLogger(ControladoraPersistencia.class.getName()).log(Level.SEVERE, "Error al modificar el turno: " + turno.getId(), e);
         }
     }
-     
-     // Buscar turno por fecha
-     public List<Turno> buscarTurnoPorFecha(LocalDate fecha){
-         return turnoJpa.findTurnoEntities().stream()
-                 .filter(n -> n.getFechaTurno().isEqual(fecha)).toList();
-                   
-     }
        
 }

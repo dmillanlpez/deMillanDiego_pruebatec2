@@ -37,9 +37,15 @@ public class Controladora {
     }
     
     // Busqueda de un ciudadano por su DNI
-    public Optional<Long> busquedaPorDni(String dni){
-        
-        return controlPersis.busquedaPorDni(dni);
+    public Optional<Long> busquedaPorDni(String dni) {
+        // Obtiene todos los ciudadanos
+        List<Ciudadano> todosLosCiudadanos = controlPersis.listarCiudadanos();
+
+        // Filtra los ciudadanos por el DNI especificado
+        return todosLosCiudadanos.stream()
+                                 .filter(c -> c.getDni().equalsIgnoreCase(dni))
+                                 .findFirst()
+                                 .map(Ciudadano::getId);
     }
     
     // Eliminar ciudadano
@@ -88,10 +94,15 @@ public class Controladora {
      }
      
      // Busqueda de turno por fecha
-     public List<Turno> buscarTurnoPorFecha(LocalDate fecha){
-         
-         return controlPersis.buscarTurnoPorFecha(fecha);
-     }
+    public List<Turno> buscarTurnoPorFecha(LocalDate fecha){
+        // Obtienes todos los turnos primero
+        List<Turno> todosLosTurnos = controlPersis.listarTurnos();
+
+        // Filtras los turnos por la fecha especificada
+        return todosLosTurnos.stream()
+                             .filter(t -> t.getFechaTurno().isEqual(fecha))
+                             .collect(Collectors.toList());
+    }
      
      // Busqueda de turno por fecha y estado
     public List<Turno> buscarTurnosPorFechaYEstado(LocalDate fecha, String estado) {
