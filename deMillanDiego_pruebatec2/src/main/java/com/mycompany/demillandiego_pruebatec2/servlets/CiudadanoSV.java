@@ -97,10 +97,16 @@ public class CiudadanoSV extends HttpServlet {
             ciudadano.setTelefono(telefono);
             
             control.crearCiudadano(ciudadano);
-        }
-        
-}
+            
+            response.sendRedirect("index.jsp");
 
+        }else {
+        // Manejo del error o redirección en caso de datos no válidos
+        // Puedes enviar un mensaje de error o redirigir a otra página
+        request.setAttribute("error", "Datos inválidos. Por favor, inténtalo de nuevo.");
+        
+    }
+}
     @Override
     public String getServletInfo() {
         return "Short description";

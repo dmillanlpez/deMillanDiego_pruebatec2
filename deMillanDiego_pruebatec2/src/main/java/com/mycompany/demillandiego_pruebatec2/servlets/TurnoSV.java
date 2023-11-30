@@ -94,6 +94,8 @@ public class TurnoSV extends HttpServlet {
         turno.setCiudadano(control.busquedaCiudadano(idCiudadano));
 
         control.crearTurno(turno);
+        response.sendRedirect("agregarTurno.jsp");
+
 
     }else{
         turno = control.buscarTurno(Long.valueOf(stringId));
@@ -102,11 +104,12 @@ public class TurnoSV extends HttpServlet {
         if(actualizarEstado != null){
             turno.setEstado(request.getParameter("cambio-estado"));
             control.modificarTurno(turno);
+            response.sendRedirect("agregarTurno.jsp");
         }else{
             System.out.println("No se ha modificado");
         }
         
-        response.sendRedirect("filtrarTurno.jsp");
+        
     }
     
     }
