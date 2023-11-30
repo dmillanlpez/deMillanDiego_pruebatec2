@@ -5,36 +5,53 @@
 package com.mycompany.demillandiego_pruebatec2.logica;
 
 import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
+import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 
 /**
  *
  * @author diego
  */
+@Entity
 public class Ciudadano implements Serializable{
     
     // Creacion del constructor tanto vacio como completo
     public Ciudadano() {
     }
 
-    public Ciudadano(int id, String dni, String nombre, String apellidos, String telefono) {
+    public Ciudadano(Long id,List<Turno> turnos, String dni, String nombre, String apellidos, String telefono) {
         this.id = id;
+        this.turnos = turnos;
         this.dni = dni;
         this.nombre = nombre;
         this.apellidos = apellidos;
         this.telefono = telefono;
     }
+
+    @OneToMany(mappedBy = "ciudadano")
+    private List<Turno> turnos = new ArrayList<>();
     
     // Creacion de los getters y setters
 
-    public int getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Long id) {
         this.id = id;
+    }
+    
+    public List<Turno> getTurnos() {
+        return turnos;
+    }
+
+    public void setTurnos(List<Turno> turnos) {
+        this.turnos = turnos;
     }
 
     public String getDni() {
@@ -68,7 +85,7 @@ public class Ciudadano implements Serializable{
     public void setTelefono(String telefono) {
         this.telefono = telefono;
     }
-    
+
     // Creacion a mayores del metodo toString()
 
     @Override
@@ -79,7 +96,7 @@ public class Ciudadano implements Serializable{
     // Atributos
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private Long id;
     private String dni;
     private String nombre;
     private String apellidos;
