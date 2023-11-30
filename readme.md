@@ -31,3 +31,37 @@ En esta pestaña tenemos de nuevo un formulario en el cual una vez rellenados to
 ![Screenshot 2023-11-30 at 5 32 48 AM](https://github.com/dmillanlpez/deMillanDiego_pruebatec2/assets/97486464/383c0f58-ac96-422a-a63f-765fda3ede82)
 
 Aquí se muestran todos los turnos disponibles en la página. Inicialmente, esta sección aparece vacía hasta que se selecciona la opción de mostrar todos los turnos. Esta funcionalidad proporciona una visión general y detallada de los turnos programados.
+
+# Filtrar turnos por fecha
+
+![Screenshot 2023-11-30 at 5 38 46 AM](https://github.com/dmillanlpez/deMillanDiego_pruebatec2/assets/97486464/80432029-e19d-4a4b-b453-9984ae8b1229)
+
+Esta sección de la aplicación está diseñada para la filtración de turnos por una fecha específica. Mediante un formulario intuitivo, los usuarios tienen la capacidad de seleccionar una fecha y visualizar todos los turnos asignados a los distintos días. Además, se facilita la posibilidad de actualizar el estado de los turnos, por ejemplo, cambiando un turno del estado "En espera" a "Atendido" y viceversa. 
+
+# Filtrar por fecha y por estado del turno
+
+![Screenshot 2023-11-30 at 5 43 26 AM](https://github.com/dmillanlpez/deMillanDiego_pruebatec2/assets/97486464/5aa43f79-2643-4c13-b80a-dd7ee3e148d7)
+
+Esta funcionalidad amplía la capacidad de filtrado de turnos, permitiendo a los usuarios no solo buscar por fecha sino también por el estado específico del turno. Esta característica es particularmente útil para gestionar y organizar los turnos de manera más eficiente, facilitando la visualización de los turnos en diferentes categorías como "En espera" y "Ya atendido". 
+
+# Funciones futuras 
+
+Modificación de Datos de Usuarios
+Una funcionalidad clave a implementar es la capacidad de modificar los datos de los usuarios. Esto permitiría a los administradores actualizar información importante como nombres, apellidos, DNI, teléfonos, entre otros, asegurando que los registros se mantengan precisos y actualizados.
+
+Integración con Calendario
+Integrar la aplicación con aplicaciones de calendario (como Google Calendar) para que los usuarios puedan sincronizar sus turnos directamente con sus calendarios personales. Esto facilitaría la gestión personal de horarios y compromisos.
+
+Sistema de Feedback
+Incorporar un sistema de retroalimentación donde los ciudadanos puedan valorar su experiencia y ofrecer sugerencias. Esta información sería valiosa para mejorar continuamente el servicio.
+
+# Tecnologías utilizadas
+
+- JSP
+- Java + Servlets
+- JPA
+- MySQL
+- Colecciones
+- Objetos
+- Streams
+- Funciones lambda
