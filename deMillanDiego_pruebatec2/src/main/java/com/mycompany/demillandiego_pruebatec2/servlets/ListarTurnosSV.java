@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Servlet.java to edit this template
- */
 package com.mycompany.demillandiego_pruebatec2.servlets;
 
 import com.mycompany.demillandiego_pruebatec2.logica.Controladora;
@@ -15,30 +11,15 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-/**
- *
- * @author diego
- */
-@WebServlet(name = "ListarTurnos", urlPatterns = {"/ListarTurnos"})
-public class ListarTurnos extends HttpServlet {
+@WebServlet(name = "ListarTurnosSV", urlPatterns = {"/ListarTurnosSV"})
+public class ListarTurnosSV extends HttpServlet {
     
     private Controladora control = new Controladora();
 
-
-    /**
-     * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
-     * methods.
-     *
-     * @param request servlet request
-     * @param response servlet response
-     * @throws ServletException if a servlet-specific error occurs
-     * @throws IOException if an I/O error occurs
-     */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
-            /* TODO output your page here. You may use following sample code. */
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
@@ -50,20 +31,14 @@ public class ListarTurnos extends HttpServlet {
             out.println("</html>");
         }
     }
-
-    // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
-    /**
-     * Handles the HTTP <code>GET</code> method.
-     *
-     * @param request servlet request
-     * @param response servlet response
-     * @throws ServletException if a servlet-specific error occurs
-     * @throws IOException if an I/O error occurs
-     */
-    
-    /**
-     * Maneja la solicitud GET para listar todos los turnos.
-     * Recupera todos los turnos de la base de datos y los envia a la pagina JSP para que pueda ser visto por el user.
+  
+     /**
+     Este metodo gestiona las solicitudes GET enviadas al servlet. Su funcion es recuperar todos los turnos almacenados en la base de datos y 
+     enviarlos al jsp correspondiente.
+     * El metodo primero invoca a la f(x) listarTurnos() para obtener una lista de todos los turnos existentes. Luego, establece esta lista 
+     * de turnos como un atributo en el objeto request bajo la clave "resultadoTurnos".
+     *Por ultimo, redirige la solicitud y la respuesta al jsp llamado listarTurnos.jsp donde los datos estaran disponibles para que sean mostrados 
+     * al usuar.
      */
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
@@ -75,30 +50,12 @@ public class ListarTurnos extends HttpServlet {
         request.getRequestDispatcher("listarTurnos.jsp").forward(request, response);
 }
     
-
-    /**
-     * Handles the HTTP <code>POST</code> method.
-     *
-     * @param request servlet request
-     * @param response servlet response
-     * @throws ServletException if a servlet-specific error occurs
-     * @throws IOException if an I/O error occurs
-     */
-    
-    /**
-     * En este caso el doPost no hace nada, esta clase solo existe para el doGet
-     */
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         processRequest(request, response);
     }
-
-    /**
-     * Returns a short description of the servlet.
-     *
-     * @return a String containing servlet description
-     */
+   
     @Override
     public String getServletInfo() {
         return "Short description";

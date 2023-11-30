@@ -1,7 +1,4 @@
-<%-- 
-   Document   : index
-   Author     : diego
-   --%>
+
 <%@ include file="header.jsp" %>
 <%@page import="java.util.List"%>
 <%@page import="com.mycompany.demillandiego_pruebatec2.logica.Turno"%>

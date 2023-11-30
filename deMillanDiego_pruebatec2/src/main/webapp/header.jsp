@@ -1,8 +1,3 @@
-<%-- 
-    Document   : header
-    Created on : Nov 29, 2023, 9:03:38 PM
-    Author     : diego
---%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>

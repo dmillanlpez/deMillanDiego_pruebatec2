@@ -1,8 +1,4 @@
-<%-- 
-   Document   : filtrarTurno
-   Created on : Nov 30, 2023, 12:14:00 AM
-   Author     : diego
-   --%>
+
 <%@page import="java.util.List"%>
 <%@page import="com.mycompany.demillandiego_pruebatec2.logica.Turno"%>
 <%@ include file="header.jsp" %>

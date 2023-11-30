@@ -1,7 +1,4 @@
-<%-- 
-   Document   : filtradoFechaTurno
-   Author     : diego
-   --%>
+
 <%@page import="com.mycompany.demillandiego_pruebatec2.logica.Turno"%>
 <%@page import="java.util.List"%>
 <%@ include file="header.jsp" %>
@@ -17,7 +14,7 @@
       <main class="main-container">
          <section class="form-section">
              <h1 class="titulo">Filtrado por Fecha y Estado</h1>
-            <form action="FiltradoFechaTurno" method="get">
+            <form action="FiltradoFechaTurnoSV" method="get">
                <label for="fecha">Fecha:</label>
                <input type="date" id="fecha" name="fecha" class="form-control" required> <!-- Agregado .form-control aquí -->
                <label for="estado">Estado:</label>

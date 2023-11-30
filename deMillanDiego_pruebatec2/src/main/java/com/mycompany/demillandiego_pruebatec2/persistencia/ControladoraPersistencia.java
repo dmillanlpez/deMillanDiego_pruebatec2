@@ -1,7 +1,4 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 package com.mycompany.demillandiego_pruebatec2.persistencia;
 
 import com.mycompany.demillandiego_pruebatec2.logica.Ciudadano;
@@ -14,10 +11,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import java.util.stream.Collector;
 
-/**
- *
- * @author diego
- */
+
 public class ControladoraPersistencia {
     
     // Creacion de instancias para ciudadano y turno

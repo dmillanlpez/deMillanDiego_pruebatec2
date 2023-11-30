@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Servlet.java to edit this template
- */
 package com.mycompany.demillandiego_pruebatec2.servlets;
 
 import com.mycompany.demillandiego_pruebatec2.logica.Ciudadano;
@@ -17,15 +13,13 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-/**
- *
- * @author diego
- */
+
 @WebServlet(name = "CiudadanoSV", urlPatterns = {"/CiudadanoSV"})
 public class CiudadanoSV extends HttpServlet {
     
     // Lista para almacenar objetos de tipo Ciudadano.
     private List<Ciudadano> listaCiudadano = new ArrayList<>();
+    
     private Controladora control = new Controladora();
 
 
@@ -33,7 +27,6 @@ public class CiudadanoSV extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
-            /* TODO output your page here. You may use following sample code. */
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
@@ -73,9 +66,17 @@ public class CiudadanoSV extends HttpServlet {
       
  }
     
-    /*
+     /**
      * Maneja la solicitud POST para agregar un nuevo ciudadano.
-     * Valida los campos del formulario y, si son correctos, crea y almacena un nuevo objeto Ciudadano.
+     * Este método recoge los datos de un formulario, validando que los campos no esten vacios y que el telefono tenga el formato correcto.
+     * 
+     * - Si los datos son validos:
+     *   - Se crea un nuevo objeto 'Ciudadano' y se establecen sus atributos con los valores recogidos del formulario.
+     *   - Luego, se llama al metodo 'crearCiudadano' de la clase 'Controladora' para guardar el nuevo ciudadano en la base de datos.
+     *   - Finalmente, se redirige al usuario al 'index.jsp'.
+     * 
+     * - Si los datos no son validos o faltan los requeridos para la inserccion:
+     *   - Se establece un atributo de error en la solicitud y se podría redirigir a una página de error o mostrar un mensaje en la misma página.
      */
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
@@ -86,7 +87,7 @@ public class CiudadanoSV extends HttpServlet {
         String dni = request.getParameter("dni");
         String telefono = request.getParameter("telefono");
         
-        // Valido los datos en caso de que esten vacios y si todo es correcto se crea un objeto (explicacion linea 78)
+        // Hacer regex para el dni? 
         if(!nombre.isEmpty() && !apellidos.isEmpty() && !dni.isEmpty() && telefono.matches("^[0-9]{9}$")){
             
             Ciudadano ciudadano = new Ciudadano();
@@ -101,7 +102,7 @@ public class CiudadanoSV extends HttpServlet {
             response.sendRedirect("index.jsp");
 
         }else {
-        request.setAttribute("error", "Datos inválidos. Por favor, inténtalo de nuevo.");
+        request.setAttribute("error", "Los datos son invalidos. Por favor, intentalo de nuevo.");
         
     }
 }

@@ -1,8 +1,3 @@
-<%-- 
-   Document   : listarTurnos
-   Created on : Nov 30, 2023, 1:08:58 AM
-   Author     : diego
-   --%>
 <%@page import="java.util.List"%>
 <%@page import="com.mycompany.demillandiego_pruebatec2.logica.Turno"%>
 <%@ include file="header.jsp" %>
@@ -19,7 +14,7 @@
          <section class="form-section">
             <h1 class="titulo">Listado de todos los Turnos</h1>
             <div class="btn-container">
-               <a href="ListarTurnos" class="btnList">Cargar Todos los Turnos</a>
+               <a href="ListarTurnosSV" class="btnList">Cargar Todos los Turnos</a>
             </div>
             <table class="table">
                <thead>
