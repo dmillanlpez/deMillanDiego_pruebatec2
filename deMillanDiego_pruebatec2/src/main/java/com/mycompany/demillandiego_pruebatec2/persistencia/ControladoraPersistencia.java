@@ -57,10 +57,8 @@ public class ControladoraPersistencia {
             ciudadanoJpa.edit(ciudadano);
         } catch (NonexistentEntityException e) {
             Logger.getLogger(ControladoraPersistencia.class.getName()).log(Level.SEVERE, "Estas intentando modificar un ciudadano que no existe: " + ciudadano.getId(), e);
-            // Aquí podrías agregar más lógica para manejar esta situación específica
         } catch (Exception e) {
             Logger.getLogger(ControladoraPersistencia.class.getName()).log(Level.SEVERE, "Error al modificar el ciudadano: " + ciudadano.getId(), e);
-            // Manejar otras excepciones generales
         }
     }    
     
