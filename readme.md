@@ -4,5 +4,18 @@ Esta es una aplicación para una entidad gubernamental en la cual debemos crear 
 
 # Creacion de un Ciudadano
 
-![Screenshot 2023-11-30 at 5 14 39 AM](https://github.com/dmillanlpez/deMillanDiego_pruebatec2/assets/97486464/be3c550a-3d04-42cb-91aa-8b57a023726e)
+![Screenshot 2023-11-30 at 5 18 13 AM](https://github.com/dmillanlpez/deMillanDiego_pruebatec2/assets/97486464/2f11fdba-c7d5-460b-aa33-e78e42ee5f2f)
 
+En la imagen se puede observar un formulario en el cual podemos realizar dos acciones.
+
+Primer formulario: Creación de un Ciudadano. En este formulario, deberemos introducir el nombre, apellidos, DNI y un teléfono.
+
+Segundo formulario: Búsqueda e impresión en una tabla de los diferentes datos de un usuario. Para que la tabla sea invocada, simplemente debemos poner un ID y, si este es correcto, nos mostrará al ciudadano.
+
+Todos los campos anteriormente nombrados contienen sus diferentes validaciones en caso de que los campos estén vacíos o los formatos no sean los adecuados.
+
+# Barra de Navegacion
+
+![Screenshot 2023-11-30 at 5 21 54 AM](https://github.com/dmillanlpez/deMillanDiego_pruebatec2/assets/97486464/33962f2f-dc4d-42a5-841b-bed7ee51428d)
+
+Podemos observar que en este encabezado disponemos de diferentes botones, los cuales nos van a permitir navegar por la página.
